@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "predeploy": [
+      "yarn run lint",
+      "yarn run build"
+    ],
+    "source": "./"
+  }
+}
