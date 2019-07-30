@@ -1,9 +1,8 @@
 {
   "functions": {
     "predeploy": [
-      "yarn run lint",
-      "yarn run build"
-    ],
-    "source": "./"
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
   }
 }

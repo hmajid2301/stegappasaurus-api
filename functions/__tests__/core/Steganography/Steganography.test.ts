@@ -1,4 +1,4 @@
-import { Steganography } from "../../../../core";
+import { Steganography } from "~/core";
 import TestData from "./data";
 
 test.each(TestData)(

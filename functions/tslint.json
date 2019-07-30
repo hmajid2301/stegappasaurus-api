@@ -5,11 +5,6 @@
     "tslint-config-standard",
     "tslint-config-prettier"
   ],
-  "linterOptions": {
-    "exclude": [
-      "**/node_modules/**/*"
-    ]
-  },
   "jsRules": {},
   "rules": {
     "jsx-boolean-value": false,

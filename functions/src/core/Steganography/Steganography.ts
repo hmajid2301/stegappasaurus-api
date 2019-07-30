@@ -4,13 +4,13 @@ import lz from "lzutf8";
 import { stringToArray } from "utf8-to-bytes";
 import varint from "varint";
 
-import { IEncode } from "../../models";
 import {
   ImageNotEncodedError,
   ImageTooSmallError,
   InvalidImageError,
   MessageTooLongError
-} from "../exceptions";
+} from "~/core/exceptions";
+import { IEncode } from "~/web/models";
 import { DecodeLSB, EncodeLSB } from "./LSB";
 
 type AlgorithmNames = IEncode["algorithm"];
