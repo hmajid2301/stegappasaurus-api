@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.1] - 30-07-19
+## Added
+- Path alias use `~` to point to `src` folder instead of `../...` etc.
+
+### Changed
+- Project structure to match default by Firebase core project files exist in `functions`.
+- README so badges all line up (in a single line).
+- Using NPM instead of yarn.
+- GitLab CI to match new project structure.
+
 ## [1.0.0] - 27-07-19
 ### Added
 - Encode and decode using LSB.

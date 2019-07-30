@@ -10,7 +10,7 @@ import { ValidateToken } from "./web/middleware";
 initializeApp();
 const app = express();
 new OpenApiValidator({
-  apiSpecPath: resolve(__dirname, "./openapi/specification.yml")
+  apiSpecPath: resolve(__dirname, "../openapi/specification.yml")
 }).install(app);
 
 const isProduction = config().env.production;

@@ -1,12 +1,12 @@
 import * as express from "express";
 
-import { Steganography } from "../../core";
+import { Steganography } from "~/core";
 import {
   ImageTooSmallError,
   InvalidImageError,
   MessageTooLongError
-} from "../../core/exceptions";
-import { IAPIError, IEncode, IEncodingSuccess } from "../../web/models";
+} from "~/core/exceptions";
+import { IAPIError, IEncode, IEncodingSuccess } from "~/web/models";
 
 /**
  * Encodes data into an image.
