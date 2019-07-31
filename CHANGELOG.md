@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - GitLab CI to not use env variable but cli arguments for gitlab automation scripts.
 
+### Fixed
+- GitLab CI jobs related to Firebase, failing due to incorrect arguments.
+
 ## [1.0.1] - 30-07-19
 ## Added
 - Path alias use `~` to point to `src` folder instead of `../...` etc.

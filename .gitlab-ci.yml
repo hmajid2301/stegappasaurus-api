@@ -62,14 +62,14 @@ publish:firebase:functions:
   only:
     - /^release/.*$/
   script:
-    - npm run deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_TOKEN
+    - npm run deploy -- -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_TOKEN
 
 publish:firebase:env:
   stage: publish
   only:
     - /^release/.*$/
   script:
-    - npm run firebase functions:config:set env.production=true --non-interactive --token $FIREBASE_DEPLOY_TOKEN
+    - npx firebase functions:config:set env.production=true --non-interactive --token $FIREBASE_DEPLOY_TOKEN
 
 publish:release:
   image: registry.gitlab.com/gitlab-automation-toolkit/gitlab-auto-release
