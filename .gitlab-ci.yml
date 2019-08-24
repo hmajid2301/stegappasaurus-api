@@ -17,7 +17,7 @@ variables:
 
 before_script:
   - cd functions
-  - npm install
+  - yarn
 
 create:merge-request:
   image: registry.gitlab.com/gitlab-automation-toolkit/gitlab-auto-mr
@@ -32,29 +32,29 @@ create:merge-request:
 lint:
   stage: test
   script:
-    - npm run lint
+    - yarn run lint
 
 lint:code-formatter:
   stage: test
   script:
-    - npm run code-formatter-check
+    - yarn run code-formatter-check
 
 lint:compiler:
   stage: test
   script:
-    - npm run compiler-check
+    - yarn run compiler-check
 
 tests:unit:
   stage: test
   script:
-    - npm run tests
+    - yarn run tests
 
 test:coverage:
   stage: test
   only:
     - master
   script:
-    - npm run coverage
+    - yarn run coverage
   coverage: /All\sfiles.*?\s+(\d+.\d+)/
 
 publish:firebase:functions:
@@ -62,14 +62,14 @@ publish:firebase:functions:
   # only:
   #   - /^release/.*$/
   script:
-    - npm run deploy -- -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_TOKEN
+    - yarn run deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_TOKEN
 
 publish:firebase:env:
   stage: publish
   # only:
   #   - /^release/.*$/
   script:
-    - npx firebase functions:config:set env.production=true --non-interactive --token $FIREBASE_DEPLOY_TOKEN
+    - yarn firebase functions:config:set env.production=true --non-interactive --token $FIREBASE_DEPLOY_TOKEN
 
 publish:release:
   image: registry.gitlab.com/gitlab-automation-toolkit/gitlab-auto-release
