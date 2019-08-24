@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ## [1.0.1] - 2019-08-24
-## Added
+### Added
 - Path alias use `~` to point to `src` folder instead of `../...` etc.
 
 ### Changed
