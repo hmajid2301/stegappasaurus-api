@@ -7,8 +7,8 @@
 [![pipeline status](https://gitlab.com/stegappasaurus/stegappasaurus-api/badges/master/pipeline.svg)](https://gitlab.com/stegappasaurus/stegappasaurus-api/commits/master)
 [![coverage report](https://gitlab.com/stegappasaurus/stegappasaurus-api/badges/master/coverage.svg)](https://gitlab.com/stegappasaurus/stegappasaurus-api/commits/master)
 
-This project contains the Firebase Cloud Functions API for the React Native mobile application. This project contains the
-code to encode and decode images.
+This project contains the Firebase Cloud Functions API for the React Native mobile application. 
+This project contains the code to encode and decode images, using steganography algorithms.
 
 ## Algorithms
 
@@ -24,9 +24,9 @@ To setup firebase
 
 ```bash
 git clone https://github.com/stegappasaurus/stegappasaurus-api.git
-npm install
+yarn
 vim .runtimeconfig.json
-npm run firebase-emulator
+yarn run firebase-emulator
 ```
 
 ### Example .runtimeconfig.json
