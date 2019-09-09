@@ -31,21 +31,29 @@ create:merge-request:
 
 lint:
   stage: test
+  only:
+    - merge_request
   script:
     - yarn run lint
 
 lint:code-formatter:
   stage: test
+  only:
+    - merge_request
   script:
     - yarn run code-formatter-check
 
 lint:compiler:
   stage: test
+  only:
+    - merge_request
   script:
     - yarn run compiler-check
 
 tests:unit:
   stage: test
+  only:
+    - merge_request
   script:
     - yarn run tests
 

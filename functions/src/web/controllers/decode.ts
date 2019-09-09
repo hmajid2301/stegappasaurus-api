@@ -47,5 +47,6 @@ export default (request: express.Request, response: express.Response) => {
       message: errorMessage
     } as IAPIError;
   }
+  console.log("Decoding", status);
   response.status(status).json(decoding);
 };
