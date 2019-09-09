@@ -57,5 +57,6 @@ export default async (request: express.Request, response: express.Response) => {
       message: errorMessage
     } as IAPIError;
   }
+  console.log("Encoding", status);
   response.status(status).json(encoding);
 };
